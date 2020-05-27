@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Stack\" />
+    <Folder Include="Queue\" />
+    <Folder Include="Array\" />
+    <Folder Include="Heap\" />
+    <Folder Include="Tree\" />
+    <Folder Include="30 Day Challenge\" />
+    <Folder Include="30 Day Challenge\Array\" />
+    <Folder Include="30 Day Challenge\Stack\" />
+    <Folder Include="30 Day Challenge\Tree\" />
+    <Folder Include="30 Day Challenge\Linked List\" />
+    <Folder Include="30 Day Challenge\Heap\" />
+    <Folder Include="Helper\" />
+    <Folder Include="30 Day Challenge\Backtracking\" />
+    <Folder Include="DP\" />
+  </ItemGroup>
+</Project>
