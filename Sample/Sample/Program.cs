@@ -9,6 +9,7 @@ using Sample.DayChallenge;
 using Sample.Microsoft;
 using Sample.Stack;
 using Sample.BackTracking;
+using Sample.DP;
 
 namespace Sample
 {
@@ -58,7 +59,7 @@ namespace Sample
                 Console.WriteLine("29. Find Straight Line");
                 Console.WriteLine("30. Perfect Square");
                 Console.WriteLine("31. Town Judge");
-                Console.WriteLine("32 Trie");
+                Console.WriteLine("32. Trie");
                 Console.WriteLine("33. MaxSum(Circular Array)");
                 Console.WriteLine("34. Anagrams");
                 Console.WriteLine("35. Stock Spanner");
@@ -66,9 +67,11 @@ namespace Sample
                 Console.WriteLine("37. Count Squares");
                 Console.WriteLine("38. IntersectionIntervals");
                 Console.WriteLine("39. IntersectionLines");
+                Console.WriteLine("40. GroupPeople");
+                Console.WriteLine("41. Build BST From Pre");
                 
                 // int option = int.Parse(Console.ReadLine());
-                int option = 39;
+                int option = 41;
 
                 switch (option)
                 {
@@ -190,6 +193,12 @@ namespace Sample
                         break;
                     case 39:
                         IntersectLines.Instance.Do();
+                        break;
+                    case 40:
+                        GroupPeople.Instance.Do();
+                        break;
+                    case 41:
+                        BSTFromPre.Instance.Do();
                         break;
                     }
 
