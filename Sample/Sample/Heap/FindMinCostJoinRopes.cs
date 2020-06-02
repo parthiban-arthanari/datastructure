@@ -19,7 +19,7 @@ namespace Sample.Heap
         {
             Read();
 
-            Heap h = new Heap(ropes.Length, 0);
+            Heap<int> h = new Heap<int>(ropes.Length, 0);
             h.BuildHeap(ropes);
 
             int min_cost = 0;

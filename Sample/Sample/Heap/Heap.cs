@@ -1,12 +1,12 @@
 ﻿using System;
 namespace Sample.Heap
 {
-    public class Heap
+    public class Heap<T>  where T : IComparable<T>
     {
         int _heap_type;
         int _capacity;
         int _count;
-        int[] _arr;
+        T[] _arr;
 
         public int Count
         {
@@ -20,7 +20,7 @@ namespace Sample.Heap
             this._heap_type = heap_type;
             this._capacity = capacity;
             this._count = 0;
-            this._arr = new int[_capacity];
+            this._arr = new T[_capacity];
         }
 
         public int Parent(int i)
@@ -50,39 +50,40 @@ namespace Sample.Heap
             return right;
         }
 
-        public int GetMaxOrMin()
+        public T GetMaxOrMin()
         {
             if (this._count == 0)
-                return -1;
+                throw new InvalidOperationException("There are no elements in the heap");
 
             return this._arr[0];
         }
 
         public void PercolateDown(int i)
         {
-            int l, r, minMax, temp;
+            int l, r, minMax;
+            T temp;
 
             l = LeftChild(i);
             r = RightChild(i);
 
             if (this._heap_type == 1)
             {
-                if (l != -1 && this._arr[l] > this._arr[i])
+                if (l != -1 &&  this._arr[l].CompareTo(this._arr[i]) > 0)
                     minMax = l;
                 else
                     minMax = i;
 
-                if (r != -1 && this._arr[r] > this._arr[minMax])
+                if (r != -1 && this._arr[r].CompareTo(this._arr[minMax]) > 0)
                     minMax = r;
             }
             else
             {
-                if (l != -1 && this._arr[l] < this._arr[i])
+                if (l != -1 && this._arr[i].CompareTo(this._arr[l]) > 0)
                     minMax = l;
                 else
                     minMax = i;
 
-                if (r != -1 && this._arr[r] < this._arr[minMax])
+                if (r != -1 && this._arr[minMax].CompareTo(this._arr[r]) > 0)
                     minMax = r;
             }
 
@@ -96,9 +97,9 @@ namespace Sample.Heap
             }
         }
         
-        public int Delete(int i = 0)
+        public T Delete(int i = 0)
         {
-            int data;
+            T data;
             if (this._count == 0)
                 throw new IndexOutOfRangeException("Heap is empty");
 
@@ -121,9 +122,9 @@ namespace Sample.Heap
 
             if (this._heap_type == 1)
             {
-                if (this._arr[i] > this._arr[parent])
+                if (this._arr[i].CompareTo(this._arr[parent]) > 0)
                 {
-                    int temp = this._arr[i];
+                    T temp = this._arr[i];
                     this._arr[i] = this._arr[parent];
                     this._arr[parent] = temp;
                     PercolateUp(parent);
@@ -131,9 +132,9 @@ namespace Sample.Heap
             }
             else
             {
-                if (this._arr[i] < this._arr[parent])
+                if (this._arr[i].CompareTo(this._arr[parent]) < 0)
                 {
-                    int temp = this._arr[i];
+                    T temp = this._arr[i];
                     this._arr[i] = this._arr[parent];
                     this._arr[parent] = temp;
                     PercolateUp(parent);
@@ -141,7 +142,7 @@ namespace Sample.Heap
             }
         }
 
-        public int Insert(int data)
+        public int Insert(T data)
         {
             if (this._count >= this._capacity)
                 return -1;
@@ -155,14 +156,14 @@ namespace Sample.Heap
             return i;
         }
 
-        public void BuildHeap(int[] arr)
+        public void BuildHeap(T[] arr)
         {
             int n = arr.Length;
 
             if (n > this._capacity)
                 return;
 
-            this._arr = new int[n];
+            this._arr = new T[n];
 
             for(int i =0; i<n; i++)
             {

@@ -10,6 +10,7 @@ using Sample.Microsoft;
 using Sample.Stack;
 using Sample.BackTracking;
 using Sample.DP;
+using Sample.Graph;
 
 namespace Sample
 {
@@ -69,9 +70,15 @@ namespace Sample
                 Console.WriteLine("39. IntersectionLines");
                 Console.WriteLine("40. GroupPeople");
                 Console.WriteLine("41. Build BST From Pre");
+                Console.WriteLine("42. Count Bits");
+                Console.WriteLine("43. Dependent Subject");
+                Console.WriteLine("44. Dependent Subject (Graph)");
+                Console.WriteLine("45. Invert Tree");
+                Console.WriteLine("46. Shortest distance from Origin");
+                Console.WriteLine("47. Minimum Operation");
                 
                 // int option = int.Parse(Console.ReadLine());
-                int option = 41;
+                int option = 47;
 
                 switch (option)
                 {
@@ -199,6 +206,24 @@ namespace Sample
                         break;
                     case 41:
                         BSTFromPre.Instance.Do();
+                        break;
+                    case 42:
+                        CountingBits.Instance.Do();
+                        break;
+                    case 43:
+                        DependentSubject.Instance.Do();
+                        break;
+                    case 44:
+                        G_DependentSubject.Instance.Do();
+                        break;
+                    case 45:
+                        InvertTree.Instanc.Do();
+                        break;
+                    case 46:
+                        ShortDistFromOrigin.Instance.Do();
+                        break;
+                    case 47:
+                        MinimumOperation.Instance.Do();
                         break;
                     }
 
