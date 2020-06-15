@@ -11,6 +11,9 @@ using Sample.Stack;
 using Sample.BackTracking;
 using Sample.DP;
 using Sample.Graph;
+using Sample.Greedy;
+using Sample.ML;
+using Sample.Bit;
 
 namespace Sample
 {
@@ -19,9 +22,10 @@ namespace Sample
     {
          static void Main(string[] args)
         {
-            Menu();
-            // var microSoftRunner = new MSProgramRunner();
-            // microSoftRunner.Run();
+            // Menu();
+            
+            var runner = new GraphRunner();
+            runner.Run();
         }
 
         public static void Menu()

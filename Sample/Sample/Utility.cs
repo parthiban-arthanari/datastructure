@@ -1,7 +1,21 @@
 using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Sample
 {
+    public class ComparableArray : List<int>, IComparable<ComparableArray>
+    {
+        public ComparableArray(int[] arr)
+        {
+            this.AddRange(new List<int>(arr));
+        }
+        public int CompareTo(ComparableArray other)
+        {
+            return this[1] - other[1];
+        }
+    }
+
     public static class Utility
     {
         public static T[][] Convert2DArray<T>(string input, int size)
@@ -17,7 +31,7 @@ namespace Sample
                 arr[i]= new T[size];
                 for(int j=0; j<size; j++)
                 {
-                    var value = temp[ (i * 2) + j].Replace("[", string.Empty).Replace("]", string.Empty);
+                    var value = temp[ (i * size) + j].Replace("[", string.Empty).Replace("]", string.Empty);
                     arr[i][j] = (T)Convert.ChangeType(value, typeof(T));
                 }
 

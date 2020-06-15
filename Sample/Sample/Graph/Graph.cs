@@ -8,7 +8,7 @@ namespace Sample.Graph
         private readonly int _v;
         private int _e;
 
-        private LinkedList<int>[] adjList;
+        private List<int>[] adjList;
         private int[] indegree;
 
         public int V
@@ -22,7 +22,7 @@ namespace Sample.Graph
             private set { _e = value; }
         }
 
-        public LinkedList<int>[] AdjList
+        public List<int>[] AdjList
         {
             get { return adjList; }
         }
@@ -31,11 +31,11 @@ namespace Sample.Graph
         {
             _v = V;
 
-            adjList = new LinkedList<int>[_v];
+            adjList = new List<int>[_v];
             indegree = new int[_v];
 
             for(int i=0; i<_v; i++)
-                adjList[i] = new LinkedList<int>();
+                adjList[i] = new List<int>();
         }
 
         private void ValidateVertex(int u)
@@ -48,7 +48,7 @@ namespace Sample.Graph
             ValidateVertex(u);
             ValidateVertex(v);
             E++;
-            adjList[u].AddLast(v);
+            adjList[u].Add(v);
             indegree[v]++;
         }
 

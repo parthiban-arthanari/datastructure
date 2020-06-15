@@ -189,6 +189,18 @@ namespace Sample.LS
             count++;
         }
 
+        public void Delete(Node n)
+        {
+            Node temp = Head;
+            while(temp.Next != null)
+            {
+                if(temp.Next == n)
+                {
+                    temp.Next = n.Next;
+                }
+            }
+        }
+
         public int GetCount()
         {
             return count;
