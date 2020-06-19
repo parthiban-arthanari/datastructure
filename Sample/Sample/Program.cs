@@ -14,6 +14,7 @@ using Sample.Graph;
 using Sample.Greedy;
 using Sample.ML;
 using Sample.Bit;
+using Sample.StringOperations;
 
 namespace Sample
 {
@@ -24,7 +25,7 @@ namespace Sample
         {
             // Menu();
             
-            var runner = new GraphRunner();
+            var runner = new BackTrackingRunner();
             runner.Run();
         }
 
