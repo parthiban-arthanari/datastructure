@@ -25,7 +25,7 @@ namespace Sample
         {
             // Menu();
             
-            var runner = new BackTrackingRunner();
+            var runner = new ArrayRunner();
             runner.Run();
         }
 

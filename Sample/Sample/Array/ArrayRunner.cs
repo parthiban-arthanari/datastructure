@@ -12,9 +12,13 @@ namespace Sample.Array
                 Console.WriteLine("2. ReverseString");
                 Console.WriteLine("3. Rearrange Queue");
                 Console.WriteLine("4. Search Insert");
+                Console.WriteLine("5. ReorderColor");
+                Console.WriteLine("6. InsertDeleteRandom");
+                Console.WriteLine("7. LargestDivisibleSubset");
+                Console.WriteLine("8. HIndex");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 7;
+                int choice = 8;
 
                 switch(choice)
                 {
@@ -40,6 +44,9 @@ namespace Sample.Array
                         break;
                     case 7:
                         LargestDivisibleSubset.Instance.Do();
+                        break;
+                    case 8:
+                        HIndex.Instance.Do();
                         break;
                 }
 
