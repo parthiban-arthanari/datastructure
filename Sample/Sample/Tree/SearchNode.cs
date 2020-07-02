@@ -19,7 +19,8 @@ namespace Sample.Tree
         public void Do()
         {
             Read();
-            SearchBST(Root, 4);
+            // SearchBST(Root, 4);
+            int c = Count(Root);
         }
 
         private TreeNode SearchBST(TreeNode root, int val)
@@ -30,6 +31,17 @@ namespace Sample.Tree
                 return root;
             
             return SearchBST(root.left, val)?? SearchBST(root.right, val);
+        }
+
+        private int Count(TreeNode root)
+        {
+            if(root == null) return 0;
+
+            int c = 0;
+            c += Count(root.left);
+            c += Count(root.right);
+
+            return c+1;
         }
     }
 }

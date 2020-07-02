@@ -9,9 +9,11 @@ namespace Sample.Tree
             while(true)
             {
                 Console.WriteLine("1. Search BST");
+                Console.WriteLine("2. Unique BST");
+                Console.WriteLine("3. Sum Root to Leaf");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 1;
+                int choice = 3;
 
                 switch(choice)
                 {
@@ -19,6 +21,12 @@ namespace Sample.Tree
                         return;
                     case 1:
                         SearchNode.Instance.Do();
+                        break;
+                    case 2:
+                        UniqueBST.Instance.Do();
+                        break;
+                    case 3:
+                        SumRootToLeaf.Instance.Do();
                         break;
                 }
 

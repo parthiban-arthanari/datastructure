@@ -10,9 +10,10 @@ namespace Sample.DP
             {
                 Console.WriteLine("1. CoinChange");
                 Console.WriteLine("2. LCS");
+                Console.WriteLine("3. Least perfect Square");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 2;
+                int choice = 3;
 
                 switch(choice)
                 {
@@ -23,6 +24,9 @@ namespace Sample.DP
                         break;
                     case 2:
                         LCS.Instance.Do();
+                        break;
+                    case 3:
+                        LeastPerfectSquare.Instance.Do();
                         break;
                 }
 

@@ -16,9 +16,14 @@ namespace Sample.Array
                 Console.WriteLine("6. InsertDeleteRandom");
                 Console.WriteLine("7. LargestDivisibleSubset");
                 Console.WriteLine("8. HIndex");
+                Console.WriteLine("9. Longest Duplicate Substring");
+                Console.WriteLine("10. Permutation Sequence");
+                Console.WriteLine("11. Find Single Number from Triplet");
+                Console.WriteLine("12. Find Duplicate");
+                Console.WriteLine("13. Test");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 8;
+                int choice = 13;
 
                 switch(choice)
                 {
@@ -48,6 +53,22 @@ namespace Sample.Array
                     case 8:
                         HIndex.Instance.Do();
                         break;
+                    case 9:
+                        LongestDuplicateSubstring.Instance.Do();
+                        break;
+                    case 10:
+                        PermutationSequence.Instance.Do();
+                        break;
+                    case 11:
+                        SingleNumber.Instance.Do();
+                        break;
+                    case 12:
+                        FindDuplicate.Instance.Do();
+                        break;
+                    case 13:
+                        StaircaseCoins.Instance.Do();
+                        break;
+                        
                 }
 
                 Console.ReadKey();
