@@ -22,7 +22,8 @@ namespace Sample.Graph
         public void Do()
         {
             Read();
-            Find(num, _arr, 0, 2,0);
+            // Find(num, _arr, 0, 2,0);
+            findCheapestPrice(num, _arr,0,2,0);
         }
 
         private int Find(int n, int[][] flights, int src, int dst, int K) 
@@ -74,6 +75,9 @@ namespace Sample.Graph
      
         // Build the adjacency matrix
         int[][] adjMatrix = new int[n][];
+        for(int i=0; i<n; i++)
+            adjMatrix[i] = new int[n];
+            
         foreach(var flight in flights) 
         {
             adjMatrix[flight[0]][flight[1]] = flight[2];
@@ -85,7 +89,7 @@ namespace Sample.Graph
         // Shortest steps array
         int[] currentStops = new int[n];
         System.Array.Fill(distances, int.MaxValue);
-        System.Array.Fill(distances, int.MaxValue);
+        System.Array.Fill(currentStops, int.MaxValue);
         distances[src] = 0;
         currentStops[src] = 0;
         
