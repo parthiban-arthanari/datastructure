@@ -15,6 +15,7 @@ using Sample.Greedy;
 using Sample.ML;
 using Sample.Bit;
 using Sample.StringOperations;
+using Sample.LS;
 
 namespace Sample
 {
@@ -25,7 +26,7 @@ namespace Sample
         {
             // Menu();
             
-            var runner = new ArrayRunner();
+            var runner = new BitRunner();
             runner.Run();
         }
 
@@ -149,9 +150,9 @@ namespace Sample
                     case 20:
                         BalanceParanthesis.Instance.Do();
                         break;
-                    case 21:
-                        NumberOfIlands.Instance.Do();
-                        break;
+                    // case 21:
+                    //     NumberOfIlands.Instance.Do();
+                    //     break;
                     case 22:
                         BadVersion.Instance.Do();
                         break;

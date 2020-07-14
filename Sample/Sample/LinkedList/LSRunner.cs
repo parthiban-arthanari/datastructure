@@ -1,27 +1,24 @@
 using System;
 
-namespace Sample.BackTracking
+namespace Sample.LS
 {
-    public class BackTrackingRunner
+    public class LSRunner
     {
         public void Run()
         {
             while(true)
             {
-                Console.WriteLine("1. Find and Flip Region");
-               
+                Console.WriteLine("1. Flatten the Multi List");
+
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 2;
+                int choice = 1;
 
                 switch(choice)
                 {
                     case 0:
                         return;
                     case 1:
-                        FindAndFlipRegion.Instance.Do();
-                        break;
-                    case 2:
-                        IslandPerimeter.Instance.Do();
+                        FlattenMultiList.Instance.Do();
                         break;
                 }
 

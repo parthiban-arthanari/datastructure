@@ -21,9 +21,13 @@ namespace Sample.Array
                 Console.WriteLine("11. Find Single Number from Triplet");
                 Console.WriteLine("12. Find Duplicate");
                 Console.WriteLine("13. Test");
+                Console.WriteLine("14. Prison After days");
+                Console.WriteLine("15. Convert array to sum plus one");
+                Console.WriteLine("16. Find Sun of Three numbers is zero");
+                Console.WriteLine("17. Subsets");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 13;
+                int choice = 17;
 
                 switch(choice)
                 {
@@ -68,7 +72,18 @@ namespace Sample.Array
                     case 13:
                         StaircaseCoins.Instance.Do();
                         break;
-                        
+                    case 14:
+                        PrisonCell.Instance.Do();
+                        break;
+                    case 15:
+                        PlusOne.Instance.Do();
+                        break;
+                    case 16:
+                        ThreeSum.Instance.Do();
+                        break;
+                    case 17:
+                        Subset.Instance.Do();
+                        break;
                 }
 
                 Console.ReadKey();

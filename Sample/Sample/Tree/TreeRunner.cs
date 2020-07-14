@@ -11,9 +11,11 @@ namespace Sample.Tree
                 Console.WriteLine("1. Search BST");
                 Console.WriteLine("2. Unique BST");
                 Console.WriteLine("3. Sum Root to Leaf");
+                Console.WriteLine("4. Reverse Level Order");
+                Console.WriteLine("5. Maximum Width");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 3;
+                int choice = 5;
 
                 switch(choice)
                 {
@@ -27,6 +29,12 @@ namespace Sample.Tree
                         break;
                     case 3:
                         SumRootToLeaf.Instance.Do();
+                        break;
+                    case 4:
+                        ReverseLevelOrder.Instance.Do();
+                        break;
+                    case 5:
+                        MaxWidth.Instance.Do();
                         break;
                 }
 
