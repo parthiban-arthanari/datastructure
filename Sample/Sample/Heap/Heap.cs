@@ -1,12 +1,13 @@
 ﻿using System;
 namespace Sample.Heap
 {
-    public class Heap<T>  where T : IComparable<T>
+    public class Heap<T>
     {
         int _heap_type;
         int _capacity;
         int _count;
         T[] _arr;
+        Func<T,T,bool> _comparer;
 
         public int Count
         {
@@ -15,12 +16,13 @@ namespace Sample.Heap
         }
         
 
-        public Heap(int capacity, int heap_type)
+        public Heap(int capacity, int heap_type, System.Func<T,T, bool> comparer )
         {
             this._heap_type = heap_type;
             this._capacity = capacity;
             this._count = 0;
             this._arr = new T[_capacity];
+            _comparer = comparer;
         }
 
         public int Parent(int i)
@@ -66,26 +68,26 @@ namespace Sample.Heap
             l = LeftChild(i);
             r = RightChild(i);
 
-            if (this._heap_type == 1)
+            // if (this._heap_type == 1)
             {
-                if (l != -1 &&  this._arr[l].CompareTo(this._arr[i]) > 0)
+                if (l != -1 && _comparer(_arr[l], _arr[i]))
                     minMax = l;
                 else
                     minMax = i;
 
-                if (r != -1 && this._arr[r].CompareTo(this._arr[minMax]) > 0)
+                if (r != -1 && _comparer(_arr[r], _arr[minMax]))
                     minMax = r;
             }
-            else
-            {
-                if (l != -1 && this._arr[i].CompareTo(this._arr[l]) > 0)
-                    minMax = l;
-                else
-                    minMax = i;
+            // else
+            // {
+            //     if (l != -1 && _comparer(_arr[i], _arr[l]))
+            //         minMax = l;
+            //     else
+            //         minMax = i;
 
-                if (r != -1 && this._arr[minMax].CompareTo(this._arr[r]) > 0)
-                    minMax = r;
-            }
+            //     if (r != -1 && _comparer(_arr[minMax], _arr[r]))
+            //         minMax = r;
+            // }
 
             if (minMax != i)
             {
@@ -120,9 +122,9 @@ namespace Sample.Heap
 
             int parent = (i - 1) / 2;
 
-            if (this._heap_type == 1)
+            // if (this._heap_type == 1)
             {
-                if (this._arr[i].CompareTo(this._arr[parent]) > 0)
+                if (_comparer(_arr[i], _arr[parent]))
                 {
                     T temp = this._arr[i];
                     this._arr[i] = this._arr[parent];
@@ -130,16 +132,16 @@ namespace Sample.Heap
                     PercolateUp(parent);
                 }
             }
-            else
-            {
-                if (this._arr[i].CompareTo(this._arr[parent]) < 0)
-                {
-                    T temp = this._arr[i];
-                    this._arr[i] = this._arr[parent];
-                    this._arr[parent] = temp;
-                    PercolateUp(parent);
-                }
-            }
+            // else
+            // {
+            //     if (_comparer(_arr[i], _arr[parent]))
+            //     {
+            //         T temp = this._arr[i];
+            //         this._arr[i] = this._arr[parent];
+            //         this._arr[parent] = temp;
+            //         PercolateUp(parent);
+            //     }
+            // }
         }
 
         public int Insert(T data)

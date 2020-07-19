@@ -26,7 +26,7 @@ namespace Sample
         {
             // Menu();
             
-            var runner = new BitRunner();
+            var runner = new GraphRunner();
             runner.Run();
         }
 

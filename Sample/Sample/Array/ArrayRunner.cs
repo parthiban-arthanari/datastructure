@@ -25,9 +25,12 @@ namespace Sample.Array
                 Console.WriteLine("15. Convert array to sum plus one");
                 Console.WriteLine("16. Find Sun of Three numbers is zero");
                 Console.WriteLine("17. Subsets");
+                Console.WriteLine("18. Angle Between Clock");
+                Console.WriteLine("19. Reverse string by word");
+                Console.WriteLine("20. Find power of n");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 17;
+                int choice = 20;
 
                 switch(choice)
                 {
@@ -83,6 +86,15 @@ namespace Sample.Array
                         break;
                     case 17:
                         Subset.Instance.Do();
+                        break;
+                    case 18:
+                        AngleBwClock.Instance.Do();
+                        break;
+                    case 19:
+                        ReverseStringByWord.Instance.Do();
+                        break;
+                    case 20:
+                        Pow.Instance.Do();
                         break;
                 }
 

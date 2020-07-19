@@ -22,7 +22,7 @@ namespace Sample.Heap
 
         private int[][] FindKPoints(int[][] points, int K)
         {
-            Heap<double> heap = new Heap<double>(points.Length, 0);
+            Heap<double> heap = new Heap<double>(points.Length, 0, (a, b) => a <b);
             Dictionary<double, List<int[]>> map = new Dictionary<double, List<int[]>>();
             int[][] result = new int[K][];
 

@@ -1,28 +1,24 @@
 using System;
 
-namespace Sample.Graph
+namespace Sample.Heap
 {
-    public class GraphRunner
+    public class HeapRunner
     {
         public void Run()
         {
             while(true)
             {
-                Console.WriteLine("1. Cheapest Price");
-                Console.WriteLine("2. Dependency Subject");
+                Console.WriteLine("1. Top K Frequent Elements");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 2;
+                int choice = 1;
 
                 switch(choice)
                 {
                     case 0:
                         return;
                     case 1:
-                        CheapestPrice.Instance.Do();
-                        break;
-                    case 2:
-                        G_DependentSubject.Instance.Do();
+                        K_FrequentElements.Instance.Do();
                         break;
                 }
 

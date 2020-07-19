@@ -94,12 +94,12 @@ namespace Sample.Graph
         currentStops[src] = 0;
         
         // The priority queue would contain (node, cost, stops)
-        Heap<ComparableArray> minHeap= new Heap<ComparableArray>(n, 0);
-        minHeap.Insert(new ComparableArray(new int[]{src, 0, 0}));
+        Heap<int[]> minHeap= new Heap<int[]>(n, 0, (a,b) => a[1] < b[1]);
+        minHeap.Insert(new int[]{src, 0, 0});
         
          while (minHeap.Count > 0)
           {
-            int[] info = minHeap.GetMaxOrMin().ToArray();
+            int[] info = minHeap.GetMaxOrMin();
             int node = info[0], stops = info[2], cost = info[1];
              
              // If destination is reached, return the cost to get here
@@ -119,13 +119,13 @@ namespace Sample.Graph
                     
                     // Better cost?
                     if (dU + wUV < dV) {
-                        minHeap.Insert(new ComparableArray(new int[]{nei, dU + wUV, stops + 1}));
+                        minHeap.Insert(new int[]{nei, dU + wUV, stops + 1});
                         distances[nei] = dU + wUV;
                     }
                     else if (stops < currentStops[nei]) {
                         
                         // Better steps?
-                        minHeap.Insert(new ComparableArray(new int[]{nei, dU + wUV, stops + 1}));
+                        minHeap.Insert(new int[]{nei, dU + wUV, stops + 1});
                         currentStops[nei] = stops;
                     }
                 }
