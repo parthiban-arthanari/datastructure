@@ -11,9 +11,11 @@ namespace Sample.Bit
                 Console.WriteLine("1. Power of 2");
                 Console.WriteLine("3. Hamming Distance");
                 Console.WriteLine("3. Reverse Bits");
+                Console.WriteLine("4. Bit Sum");
+                Console.WriteLine("5. Single Number");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 3;
+                int choice = 5;
 
                 switch(choice)
                 {
@@ -27,6 +29,12 @@ namespace Sample.Bit
                         break;
                     case 3:
                         ReverseBits.Instance.Do();
+                        break;
+                    case 4:
+                        BitSum.Instance.Do();
+                        break;
+                    case 5:
+                        SingleNumber.Instance.Do();
                         break;
                 }
 

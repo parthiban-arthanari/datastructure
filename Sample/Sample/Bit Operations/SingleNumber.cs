@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Sample.Array
+namespace Sample.Bit
 {
     public class SingleNumber
     {
@@ -9,15 +9,15 @@ namespace Sample.Array
         private void Read()
         {
             Console.WriteLine("Enter Number with Comma Separated");
-            // array = new int[] { 2, 5, 6, 7, 2, 3, 6, 5, 7 };
-            array = Utility.ConvertArray<int>("[1,3,4,2,2]");
+            array = new int[] { 1,2,1,3,2,5 };
         }
 
         public void Do()
         {
             Read();
-            // Console.WriteLine("Single Number from given Array {0}", FindSingleNumber(array));
-            FindSingleNumber2(array);
+            // var val = FindSingleNumber(array);
+            // var val = FindSingleNumber2(array);
+            var val = FindSingleNumber2(array);
         }
 
         private int FindSingleNumber(int[] nums)
@@ -48,6 +48,25 @@ namespace Sample.Array
             }
 
             return twice;
+        }
+
+        private int[] FindSingleNumber3(int[] nums)
+        {
+            int bitmask = 0; 
+            for (int i =0; i<nums.Length; i++) bitmask ^= nums[i];
+
+            int diff = bitmask & (-bitmask);
+
+            int x = 0;
+            for (int i=0; i<nums.Length; i++) 
+            {
+                if ((nums[i] & diff) != 0) 
+                {
+                    x ^= nums[i];
+                }
+            }
+
+            return new int[]{x, bitmask^x};
         }
     }
 }

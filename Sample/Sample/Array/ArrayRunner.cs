@@ -18,7 +18,7 @@ namespace Sample.Array
                 Console.WriteLine("8. HIndex");
                 Console.WriteLine("9. Longest Duplicate Substring");
                 Console.WriteLine("10. Permutation Sequence");
-                Console.WriteLine("11. Find Single Number from Triplet");
+                Console.WriteLine("11. Find N Duplicates");
                 Console.WriteLine("12. Find Duplicate");
                 Console.WriteLine("13. Test");
                 Console.WriteLine("14. Prison After days");
@@ -30,7 +30,7 @@ namespace Sample.Array
                 Console.WriteLine("20. Find power of n");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 20;
+                int choice = 21;
 
                 switch(choice)
                 {
@@ -67,7 +67,7 @@ namespace Sample.Array
                         PermutationSequence.Instance.Do();
                         break;
                     case 11:
-                        SingleNumber.Instance.Do();
+                        FindNDuplicates.Instance.Do();
                         break;
                     case 12:
                         FindDuplicate.Instance.Do();
@@ -95,6 +95,9 @@ namespace Sample.Array
                         break;
                     case 20:
                         Pow.Instance.Do();
+                        break;
+                    case 21:
+                        Test.Instance.Do();
                         break;
                 }
 

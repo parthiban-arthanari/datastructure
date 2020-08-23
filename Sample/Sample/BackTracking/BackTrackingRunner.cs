@@ -11,7 +11,7 @@ namespace Sample.BackTracking
                 Console.WriteLine("1. Find and Flip Region");
                
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 2;
+                int choice = 3;
 
                 switch(choice)
                 {
@@ -22,6 +22,9 @@ namespace Sample.BackTracking
                         break;
                     case 2:
                         IslandPerimeter.Instance.Do();
+                        break;
+                    case 3:
+                        SearchWord.Instance.Do();
                         break;
                 }
 

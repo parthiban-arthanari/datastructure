@@ -26,7 +26,7 @@ namespace Sample
         {
             // Menu();
             
-            var runner = new GraphRunner();
+            var runner = new ArrayRunner();
             runner.Run();
         }
 

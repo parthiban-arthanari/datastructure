@@ -13,9 +13,10 @@ namespace Sample.Tree
                 Console.WriteLine("3. Sum Root to Leaf");
                 Console.WriteLine("4. Reverse Level Order");
                 Console.WriteLine("5. Maximum Width");
+                Console.WriteLine("6. ZigZag Traversal");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 5;
+                int choice = 6;
 
                 switch(choice)
                 {
@@ -35,6 +36,9 @@ namespace Sample.Tree
                         break;
                     case 5:
                         MaxWidth.Instance.Do();
+                        break;
+                    case 6:
+                        ZigZagTraversal.Instance.Do();
                         break;
                 }
 
