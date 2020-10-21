@@ -28,9 +28,11 @@ namespace Sample.Array
                 Console.WriteLine("18. Angle Between Clock");
                 Console.WriteLine("19. Reverse string by word");
                 Console.WriteLine("20. Find power of n");
+                Console.WriteLine("21. MaxProfit");
+                Console.WriteLine("22. Majority Element");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 21;
+                int choice = 22;
 
                 switch(choice)
                 {
@@ -97,7 +99,10 @@ namespace Sample.Array
                         Pow.Instance.Do();
                         break;
                     case 21:
-                        Test.Instance.Do();
+                        MaxProfit.Instance.Do();
+                        break;
+                    case 22:
+                        MajorityElement.Instance.Do();
                         break;
                 }
 

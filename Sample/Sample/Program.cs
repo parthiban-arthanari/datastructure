@@ -26,7 +26,7 @@ namespace Sample
         {
             // Menu();
             
-            var runner = new ArrayRunner();
+            var runner = new TreeRunner();
             runner.Run();
         }
 

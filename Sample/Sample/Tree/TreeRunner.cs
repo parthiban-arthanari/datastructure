@@ -14,9 +14,10 @@ namespace Sample.Tree
                 Console.WriteLine("4. Reverse Level Order");
                 Console.WriteLine("5. Maximum Width");
                 Console.WriteLine("6. ZigZag Traversal");
+                Console.WriteLine("7. Count Smaller Number After Itself");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 6;
+                int choice = 7;
 
                 switch(choice)
                 {
@@ -39,6 +40,9 @@ namespace Sample.Tree
                         break;
                     case 6:
                         ZigZagTraversal.Instance.Do();
+                        break;
+                    case 7:
+                        NumSmallerAfterItSelf.Instance.Do();
                         break;
                 }
 

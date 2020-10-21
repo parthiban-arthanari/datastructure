@@ -13,9 +13,10 @@ namespace Sample.Bit
                 Console.WriteLine("3. Reverse Bits");
                 Console.WriteLine("4. Bit Sum");
                 Console.WriteLine("5. Single Number");
+                Console.WriteLine("6. MaxXOR");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 5;
+                int choice = 6;
 
                 switch(choice)
                 {
@@ -35,6 +36,9 @@ namespace Sample.Bit
                         break;
                     case 5:
                         SingleNumber.Instance.Do();
+                        break;
+                    case 6:
+                        MaxXOR.Instance.Do();
                         break;
                 }
 
