@@ -12,9 +12,10 @@ namespace Sample.BackTracking
                 Console.WriteLine("2. IslandPerimeter");
                 Console.WriteLine("3. SearchWord");
                 Console.WriteLine("4. RobotTrajectory");
+                Console.WriteLine("5. Cherry Pick");
                
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 4;
+                int choice = 5;
 
                 switch(choice)
                 {
@@ -31,6 +32,9 @@ namespace Sample.BackTracking
                         break;
                     case 4:
                         RobotTrajectory.Instance.Do();
+                        break;
+                    case 5:
+                        CherryPick.Instance.Do();
                         break;
                 }
 

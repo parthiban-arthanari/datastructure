@@ -18,20 +18,20 @@ namespace Sample
 
     public static class Utility
     {
-        public static T[][] Convert2DArray<T>(string input, int size)
+        public static T[][] Convert2DArray<T>(string input, int col)
         {
             var temp = input.Substring(0, input.Length -1).Split(',');
 
-            int len1 = temp.Length / size;
+            int len1 = temp.Length / col;
 
             T[][] arr = new T[len1][];
 
             for(int i =0; i<len1; i++)
             {
-                arr[i]= new T[size];
-                for(int j=0; j<size; j++)
+                arr[i]= new T[col];
+                for(int j=0; j<col; j++)
                 {
-                    var value = temp[ (i * size) + j].Replace("[", string.Empty).Replace("]", string.Empty);
+                    var value = temp[ (i * col) + j].Replace("[", string.Empty).Replace("]", string.Empty);
                     arr[i][j] = (T)Convert.ChangeType(value, typeof(T));
                 }
 
@@ -51,7 +51,8 @@ namespace Sample
                 for(int i=0; i<size; i++)
                 {
                     var value = temp[i].Replace("[", string.Empty).Replace("]", string.Empty);
-                    arr[i] = (T)Convert.ChangeType(value, typeof(T));
+                    if(!value.Equals(string.Empty))
+                        arr[i] = (T)Convert.ChangeType(value, typeof(T));
                 }
                 
             return arr;

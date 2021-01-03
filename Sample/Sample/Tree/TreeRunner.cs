@@ -15,9 +15,14 @@ namespace Sample.Tree
                 Console.WriteLine("5. Maximum Width");
                 Console.WriteLine("6. ZigZag Traversal");
                 Console.WriteLine("7. Count Smaller Number After Itself");
+                Console.WriteLine("8. Binary Tree Iterator");
+                Console.WriteLine("9. Is Valid Binary Tree");
+                Console.WriteLine("10. Nearest Node");
+                Console.WriteLine("11. IsBalanced");
+                Console.WriteLine("12. Pseudo Polindromic Path");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 7;
+                int choice = 12;
 
                 switch(choice)
                 {
@@ -43,6 +48,21 @@ namespace Sample.Tree
                         break;
                     case 7:
                         NumSmallerAfterItSelf.Instance.Do();
+                        break;
+                    case 8:
+                        BTIterator.Instance.Do();
+                        break;
+                    case 9:
+                        IsvalidBT.Instance.Do();
+                        break;
+                    case 10:
+                        NearestRightNode.Instance.Do();
+                        break;
+                    case 11:
+                        IsBalanced.Instance.Do();
+                        break;
+                    case 12:
+                        PseudoPolindromicPath.Instance.Do();
                         break;
                 }
 

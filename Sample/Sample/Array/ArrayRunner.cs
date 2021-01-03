@@ -30,9 +30,21 @@ namespace Sample.Array
                 Console.WriteLine("20. Find power of n");
                 Console.WriteLine("21. MaxProfit");
                 Console.WriteLine("22. Majority Element");
+                Console.WriteLine("23. Shortest Dist Words");
+                Console.WriteLine("24. Kth Factor");
+                Console.WriteLine("25. PlaceFlowers");
+                Console.WriteLine("26. Spiral Fill");
+                Console.WriteLine("27. Missing Range");
+                Console.WriteLine("28. SongPair");
+                Console.WriteLine("29. Mount Peak");
+                Console.WriteLine("30. Remove Duplicates Inplace");
+                Console.WriteLine("32. k Sum");
+                Console.WriteLine("32. Increasing Triplet");
+                Console.WriteLine("33. String Decode");
+                Console.WriteLine("34. Next Greater");
 
                 // int choice = int.Parse(Console.ReadLine());
-                int choice = 22;
+                int choice = 34;
 
                 switch(choice)
                 {
@@ -103,6 +115,42 @@ namespace Sample.Array
                         break;
                     case 22:
                         MajorityElement.Instance.Do();
+                        break;
+                    case 23:
+                        ShortestDistWords.Instance.Do();
+                        break;
+                    case 24:
+                        KthFactor.Instance.Do();
+                        break;
+                    case 25:
+                        PlaceFlowers.Instance.Do();
+                        break;
+                    case 26:
+                        SpiralFill.Instance.Do();
+                        break;
+                    case 27:
+                        MissingRange.Instance.Do();
+                        break;
+                     case 28:
+                        SongPair.Instance.Do();
+                        break;
+                    case 29:
+                        MountPeak.Instance.Do();
+                        break;
+                    case 30:
+                        RemoveDuplicateInPlace.Instance.Do();
+                        break;
+                    case 31:
+                        KSum.Instance.Do();
+                        break;
+                    case 32:
+                        IncreasingTriplet.Instance.Do();
+                        break;
+                    case 33:
+                        StringDecode.Instance.Do();
+                        break;
+                    case 34:
+                        NextGreater.Instance.Do();
                         break;
                 }
 
